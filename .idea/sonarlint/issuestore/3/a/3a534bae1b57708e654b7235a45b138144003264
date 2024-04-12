@@ -1,0 +1,13 @@
+
+š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(øíÁûÿÿÿÿJ$01b6fcb6-f871-48bc-a667-789b1f711238
+f
+java:S1128"Remove this duplicated import.(™˜”€ùÿÿÿÿ8ĞŞşí1J$8a6e693c-f37a-4464-ab4a-83f46e666341
+f
+java:S1128"Remove this duplicated import.(¼è½Òşÿÿÿÿ8ÑŞşí1J$04b6408c-cc93-44a5-a3c6-317cb24f8346
+r
+java:S1128"*Remove this unused import 'java.util.Set'.(ö²„¤şÿÿÿÿ8ÎÚ­’í1J$3e1686e6-36d3-4e24-b08d-22466706822b
+f
+java:S1128
+"Remove this duplicated import.(™˜”€ùÿÿÿÿ8ÏÚ­’í1J$3a0549e4-c13e-40e2-9794-dabe79b30a4c
+f
+java:S1128"Remove this duplicated import.(¼è½Òşÿÿÿÿ8ÏÚ­’í1J$b7eec2a6-1889-470e-8f44-eba85aabd49e

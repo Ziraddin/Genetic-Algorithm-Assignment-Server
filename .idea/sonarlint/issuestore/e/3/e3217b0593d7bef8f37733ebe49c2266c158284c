@@ -1,0 +1,9 @@
+
+“	java:S117X"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ì…Š8­‹´—í1J$c80b270c-da32-41b1-bad1-b911dd811348
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¾©ò¹8¯‹´—í1J$5ae63009-a22e-4481-94b2-8590a899e0b3
+™
+java:S1450"VRemove the "student" field and declare it as a local variable in the relevant methods.(¤—öö8µ‹´—í1J$e4a62b74-bdaf-4a26-9572-df49b6a36f51
+m	java:S106B"+Replace this use of System.out by a logger.(§é®·8¼‹´—í1J$7f0e1e55-4ea4-4568-9c9c-52b00f2b00b3
+}
+java:S1117V";Rename "student" which hides the field declared at line 23.(¼¹ËJ8¿‹´—í1J$3ad65d6f-d9a6-4123-ba4f-310fb5bdcc5d
+m	java:S106a"+Replace this use of System.out by a logger.(°‰”8À‹´—í1J$0139869b-9100-44a2-9f29-27268066085c

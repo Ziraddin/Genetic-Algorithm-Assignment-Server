@@ -1,0 +1,10 @@
+
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(õ¨¦â8ãÚÔ’í1J$64cccbe0-65ea-4400-8dbc-c55f0c124a10
+m	java:S106+"+Replace this use of System.out by a logger.(°ÙÉ–8ó¸ì“í1J$5d705696-a167-4dae-943a-bcdb28102c18
+m	java:S106."+Replace this use of System.out by a logger.(Öü¶•8ó¸ì“í1J$eb2b365e-e333-4513-b49d-a7e09d64eb86
+r	java:S1061"+Replace this use of System.out by a logger.(úË‘üÿÿÿÿ8´Öı“í1J$f06ca759-b399-4dbe-b235-a128760d94f9
+r	java:S1062"+Replace this use of System.out by a logger.(Ğ™€°ûÿÿÿÿ8µÖı“í1J$869d1da3-9464-482b-9bd0-e65d09687397
+r	java:S106L"+Replace this use of System.out by a logger.(şÒšøûÿÿÿÿ8¸Öı“í1J$574a1629-fbab-4855-a4b8-302c784df195
+r	java:S106M"+Replace this use of System.out by a logger.(Ğ™€°ûÿÿÿÿ8¹Öı“í1J$68f4ce9d-7250-4ae8-a948-a43070cadda6
+s
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8¨¥Ä–í1J$7f1295e4-de60-4ce4-b16a-ed3377d24330

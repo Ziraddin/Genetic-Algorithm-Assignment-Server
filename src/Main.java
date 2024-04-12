@@ -1,3 +1,5 @@
+import Server.Client;
+
 public class Main {
     public static void main(String[] args) {
         int clients = 0;

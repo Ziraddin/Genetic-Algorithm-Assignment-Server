@@ -1,9 +1,8 @@
 
-“	java:S117X"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ì…Š8­‹´—í1J$c80b270c-da32-41b1-bad1-b911dd811348
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¾©ò¹8¯‹´—í1J$5ae63009-a22e-4481-94b2-8590a899e0b3
-™
-java:S1450"VRemove the "student" field and declare it as a local variable in the relevant methods.(¤—öö8µ‹´—í1J$e4a62b74-bdaf-4a26-9572-df49b6a36f51
-m	java:S106B"+Replace this use of System.out by a logger.(§é®·8¼‹´—í1J$7f0e1e55-4ea4-4568-9c9c-52b00f2b00b3
+“	java:S117^"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ì…Š8Â¶í1J$22cd057b-1755-4295-a6af-b5fa20011b62
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¾©ò¹8Ä¶í1J$1f4893e2-0da8-43c9-b648-4cfd22ebd9f2
+r	java:S106<"+Replace this use of System.out by a logger.(ÚÖŠŒşÿÿÿÿ8­¶í1J$25b11b3d-b167-47b0-836e-2d1b6e9f0723
+m	java:S106H"+Replace this use of System.out by a logger.(§é®·8®¶í1J$e9f51d02-92c7-4b95-ae46-41cdf47f1b13
 }
-java:S1117V";Rename "student" which hides the field declared at line 23.(¼¹ËJ8¿‹´—í1J$3ad65d6f-d9a6-4123-ba4f-310fb5bdcc5d
-m	java:S106a"+Replace this use of System.out by a logger.(°‰”8À‹´—í1J$0139869b-9100-44a2-9f29-27268066085c
+java:S1117\";Rename "student" which hides the field declared at line 23.(¼¹ËJ8²¶í1J$8f484035-1069-4093-8087-01975b1d4a68
+m	java:S106g"+Replace this use of System.out by a logger.(°‰”8´¶í1J$beddf682-7514-4278-8e36-1cb8fdc54a0d

@@ -49,9 +49,15 @@ class ClientHandler implements Runnable {
                     while (!(inputLine = in.readLine()).equals("end")) {
                         preferences.add(inputLine);
                     }
-                    student = new Student(clientId + "", preferences);
-                    students.add(student);
-                    // Calculate and send best assignment
+                    if (student == null) {
+                        student = new Student(clientId + "", preferences);
+                        students.add(student);
+                    } else {
+                        students.remove(student);
+                        student.updatePreferredDestinations(preferences);
+                        students.add(student);
+                    }
+                    System.out.println("Number of Students have their preferences was submitted: " + students.size());
                     calculateBestAssignment();
                 }
             }
@@ -91,7 +97,7 @@ class ClientHandler implements Runnable {
             PrintWriter writer = clientWriters.get(studentName);
             if (writer != null) {
                 // Send the assignment result to the client
-                writer.println("Your assignment is: " + AssignedDestination.getName());
+                writer.println("You are assigned to " + AssignedDestination.getName());
                 writer.flush();
             } else {
                 System.out.println("No writer found for student name: " + studentName);

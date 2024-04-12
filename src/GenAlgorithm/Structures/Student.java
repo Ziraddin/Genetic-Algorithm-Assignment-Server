@@ -20,6 +20,10 @@ public class Student {
         return preferredDestinations;
     }
 
+    public void updatePreferredDestinations(List<String> newPreferences) {
+        preferredDestinations = newPreferences;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

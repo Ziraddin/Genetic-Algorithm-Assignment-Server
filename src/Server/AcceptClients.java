@@ -19,7 +19,7 @@ class AcceptClients implements Runnable {
     private static int nbrClients = 0;
     private static int clientNumber = 0;
     private static final int CLIENT_LIMIT = 40;
-    static Map<String, PrintWriter> clientWriters;
+    static Map<String, PrintWriter> clientWriters = new HashMap<>();
     static List<Destination> destinations = Arrays.asList(
             new Destination("Paris", rand.nextInt(5) + 1),
             new Destination("London", rand.nextInt(5) + 1),
@@ -32,7 +32,7 @@ class AcceptClients implements Runnable {
             new Destination("New York City", rand.nextInt(5) + 1),
             new Destination("Baku", rand.nextInt(5) + 1)
     );
-    static List<Student> students;
+    static List<Student> students = new ArrayList<>();
     static int populationSize = 100;
     static double mutationRate = 0.3;
 

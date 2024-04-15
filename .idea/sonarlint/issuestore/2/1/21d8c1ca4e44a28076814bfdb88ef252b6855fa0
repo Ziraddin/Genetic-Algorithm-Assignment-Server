@@ -1,0 +1,11 @@
+
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¾©ò¹8“ÀŞœí1J$e5f21b2e-b34f-44d8-954a-93bb8b21d561
+
+java:S1450"URemove the "socket" field and declare it as a local variable in the relevant methods.(Å’¬Úşÿÿÿÿ8ŸÀŞœí1J$13938e88-e2e9-45f6-b626-c11ebb93ab7e
+m
+java:S3010)"%Remove this assignment of "students".(óªÓŸüÿÿÿÿ8¨ÀŞœí1J$256095cc-9815-4258-af2c-83ad0e3e21fa
+y
+java:S26963"6Make the enclosing method "static" or remove this set.(úøŞÃ8®ÀŞœí1J$763683ee-e82c-4a6b-96cf-c45672b0ca35
+y
+java:S26964"6Make the enclosing method "static" or remove this set.(Øã£Ë8®ÀŞœí1J$ce2c9bcf-50bf-4580-975f-51f05f3baa9c
+r	java:S1068"+Replace this use of System.out by a logger.(ó˜Æøÿÿÿÿ8¯ÀŞœí1J$95b4feac-a53c-4e80-8c7b-00e331b35b1a

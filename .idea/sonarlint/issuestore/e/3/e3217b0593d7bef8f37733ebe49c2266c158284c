@@ -1,8 +1,18 @@
 
-“	java:S117^"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ì…Š8Â¶í1J$22cd057b-1755-4295-a6af-b5fa20011b62
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¾©ò¹8Ä¶í1J$1f4893e2-0da8-43c9-b648-4cfd22ebd9f2
-r	java:S106<"+Replace this use of System.out by a logger.(ÚÖŠŒşÿÿÿÿ8­¶í1J$25b11b3d-b167-47b0-836e-2d1b6e9f0723
-m	java:S106H"+Replace this use of System.out by a logger.(§é®·8®¶í1J$e9f51d02-92c7-4b95-ae46-41cdf47f1b13
+“	java:S117f"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ì…Š8ÕÙÒáï1J$98d71a3c-c78a-4982-a3b8-085ec142b269
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¾©ò¹8ÙÙÒáï1J$3aa84b8d-dccd-4528-af78-3194f6f60ac8
+•
+java:S3776$"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(“–ış8¿ÛÒáï1J$509b1f89-a82b-4943-8833-6e5b1882fea4
+m	java:S106>"+Replace this use of System.out by a logger.(óùí¡8ÇÛÒáï1J$dd0bae1c-ca3c-4c6e-b915-995db465972b
+q
+java:S5413J")Verify that "remove()" is used correctly.(¡¥®İıÿÿÿÿ8ÊÛÒáï1J$d6345491-8cd3-4799-a307-4d422e064bdb
+r	java:S106N"+Replace this use of System.out by a logger.(ãùÖ¾üÿÿÿÿ8ËÛÒáï1J$f7aa2cce-d34b-4f9b-a7c8-87aca137a062
+y
+java:S2696O"6Make the enclosing method "static" or remove this set.(†õÉò8ÍÛÒáï1J$70a5e1a6-8e77-47f0-9694-22a7d519fc70
+m	java:S106P"+Replace this use of System.out by a logger.(şúš¥8ÎÛÒáï1J$11c5730b-804e-44e4-8ed8-5ba79b5ce1aa
 }
-java:S1117\";Rename "student" which hides the field declared at line 23.(¼¹ËJ8²¶í1J$8f484035-1069-4093-8087-01975b1d4a68
-m	java:S106g"+Replace this use of System.out by a logger.(°‰”8´¶í1J$beddf682-7514-4278-8e36-1cb8fdc54a0d
+java:S1117d";Rename "student" which hides the field declared at line 25.(¼¹ËJ8ÑÛÒáï1J$3e01f899-4b69-4a44-b570-7cf1b87b9bd8
+l	java:S106m"+Replace this use of System.out by a logger.(„êñ	8ÓÛÒáï1J$d59c6713-93d2-429b-a1f8-76b4fd64c48a
+m	java:S106p"+Replace this use of System.out by a logger.(°‰”8›âï1J$7d760529-407b-422b-bdfd-468d7846bee4
+z
+java:S1128"2Remove this unused import 'java.util.Collections'.(¢³ïÓşÿÿÿÿ8ÖÛÒáï1J$239996a7-6054-488b-97e0-5dfca2d56283

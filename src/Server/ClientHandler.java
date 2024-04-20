@@ -59,7 +59,7 @@ class ClientHandler implements Runnable {
                         student.updatePreferredDestinations(preferences);
                         students.add(student);
                     }
-                    System.out.println("Number of Students have their preferences was submitted: " + students.size());
+                    System.out.println("Number of students stated their preferences: " + students.size());
                     calculateBestAssignment();
                 }
             }
@@ -75,9 +75,9 @@ class ClientHandler implements Runnable {
                     }
                 }
                 clientWriters.remove(clientId + "");
-                System.out.println("Client " + clientId + " disconnected.");
+                System.out.println("Client with id : " + clientId + " is disconnected.");
                 nbrClients--;
-                System.out.println("Client Active :  " + nbrClients);
+                System.out.println("Number of Active Clients :  " + nbrClients);
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -106,7 +106,7 @@ class ClientHandler implements Runnable {
             if (writer != null) {
                 // Send the assignment result to the client
                 writer.println("You are assigned to " + AssignedDestination.getName());
-                System.out.println(studentName + " : " + AssignedDestination.getName());
+                System.out.println("Student with id : " + studentName + " is assigned to : " + AssignedDestination.getName());
                 writer.flush();
             } else {
                 System.out.println("No writer found for student name: " + studentName);

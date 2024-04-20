@@ -16,7 +16,7 @@ class AcceptClients implements Runnable {
     static Random rand = new Random();
     private ServerSocket serverSocket;
     private Socket socket;
-    private static int nbrClients = 0;
+    static int nbrClients = 0;
     private static int clientNumber = 0;
     private static final int CLIENT_LIMIT = 40;
     static Map<String, PrintWriter> clientWriters = new HashMap<>();
@@ -44,6 +44,12 @@ class AcceptClients implements Runnable {
     @Override
     public void run() {
         try {
+            int i = 0;
+            while (i < destinations.size()) {
+                System.out.println(destinations.get(i).getName() + " : " + destinations.get(i).getMaxStudents());
+                i++;
+            }
+
             while (nbrClients < CLIENT_LIMIT) {
                 socket = serverSocket.accept();
                 BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));

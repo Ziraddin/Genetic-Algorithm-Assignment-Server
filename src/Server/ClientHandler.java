@@ -10,7 +10,9 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.Objects;
 
 import static Server.AcceptClients.*;
 
@@ -36,8 +38,8 @@ class ClientHandler implements Runnable {
             // Send client ID
             out.println(clientId);
             out.flush();
-
             String inputLine;
+
             while ((inputLine = in.readLine()) != null) {
                 if (inputLine.equals("disconnect")) {
                     // Handle client disconnection
@@ -66,10 +68,16 @@ class ClientHandler implements Runnable {
         } finally {
             try {
                 socket.close();
-                // Remove client preferences upon disconnection
-                students.remove(clientId);
+                //Remove client preferences upon disconnection
+                for (int i = 0; i < students.size(); i++) {
+                    if (Objects.equals(students.get(i).getName(), student.getName())) {
+                        students.remove(i);
+                    }
+                }
                 clientWriters.remove(clientId + "");
                 System.out.println("Client " + clientId + " disconnected.");
+                nbrClients--;
+                System.out.println("Client Active :  " + nbrClients);
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -98,6 +106,7 @@ class ClientHandler implements Runnable {
             if (writer != null) {
                 // Send the assignment result to the client
                 writer.println("You are assigned to " + AssignedDestination.getName());
+                System.out.println(studentName + " : " + AssignedDestination.getName());
                 writer.flush();
             } else {
                 System.out.println("No writer found for student name: " + studentName);

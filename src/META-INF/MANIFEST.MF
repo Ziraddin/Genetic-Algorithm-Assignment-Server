@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Tests.Main-Class: Server.Server
+

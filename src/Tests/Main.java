@@ -1,4 +1,4 @@
-import Server.Client;
+package Tests;
 
 public class Main {
     public static void main(String[] args) {

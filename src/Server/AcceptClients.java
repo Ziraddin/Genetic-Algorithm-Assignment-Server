@@ -13,13 +13,28 @@ import java.util.*;
 import java.util.Random;
 
 class AcceptClients implements Runnable {
+    // Random object for generating random numbers
     static Random rand = new Random();
+
+    // ServerSocket for accepting client connections
     private ServerSocket serverSocket;
+
+    // Socket for individual client connections
     private Socket socket;
+
+    // Number of currently connected clients
     static int nbrClients = 0;
+
+    // Counter for assigning client numbers
     private static int clientNumber = 0;
+
+    // Limit for maximum number of clients
     private static final int CLIENT_LIMIT = 40;
+
+    // Map to store client writers for sending messages
     static Map<String, PrintWriter> clientWriters = new HashMap<>();
+
+    // List of available destinations
     static List<Destination> destinations = Arrays.asList(
             new Destination("Paris", rand.nextInt(5) + 1),
             new Destination("London", rand.nextInt(5) + 1),
@@ -32,24 +47,32 @@ class AcceptClients implements Runnable {
             new Destination("New York City", rand.nextInt(5) + 1),
             new Destination("Baku", rand.nextInt(5) + 1)
     );
+
+    // List of students
     static List<Student> students = new ArrayList<>();
+
+    // Population size for genetic algorithm
     static int populationSize = 100;
+
+    // Mutation rate for genetic algorithm
     static double mutationRate = 0.3;
 
+    // Constructor for AcceptClients class
     public AcceptClients(ServerSocket s) {
         serverSocket = s;
         students = new ArrayList<>();
     }
 
+    // Run method for handling client connections
     @Override
     public void run() {
         try {
-            int i = 0;
-            while (i < destinations.size()) {
+            // Print max students for each destination
+            for (int i = 0; i < destinations.size(); i++) {
                 System.out.println(destinations.get(i).getName() + " : " + destinations.get(i).getMaxStudents());
-                i++;
             }
 
+            // Accept client connections
             while (nbrClients < CLIENT_LIMIT) {
                 socket = serverSocket.accept();
                 BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
@@ -57,10 +80,11 @@ class AcceptClients implements Runnable {
                 nbrClients++;
                 clientNumber++;
 
+                // Add client writer to map
                 clientWriters.put((clientNumber % 40) + "", out);
 
                 System.out.println("Number of clients connected : " + nbrClients);
-                out.println("Server.Client number : " + clientNumber + " is connected !");
+                out.println("Tests.Client number : " + clientNumber + " is connected !");
                 out.flush();
                 out.println(clientNumber % 40);
                 out.flush();

@@ -12,17 +12,14 @@ public class TestGeneticAlgorithm {
     public static void main(String[] args) {
         // Create students
         List<Student> students = Arrays.asList(
-                new Student("S1", Arrays.asList("D1", "D2", "D3")),
-                new Student("S2", Arrays.asList("D2", "D1", "D3")),
-                new Student("S3", Arrays.asList("D3", "D2", "D1")),
-                new Student("S4", Arrays.asList("D1", "D3", "D2"))
+                new Student("S1", Arrays.asList("D1", "D2")),
+                new Student("S2", Arrays.asList("D1"))
         );
 
         // Create destinations
         List<Destination> destinations = Arrays.asList(
                 new Destination("D1", 1),
-                new Destination("D2", 1),
-                new Destination("D3", 2)
+                new Destination("D2", 1)
         );
 
         long startTime = System.currentTimeMillis();

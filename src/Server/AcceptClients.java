@@ -76,7 +76,7 @@ class AcceptClients implements Runnable {
             while (nbrClients < CLIENT_LIMIT) {
                 socket = serverSocket.accept();
                 BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-                PrintWriter out = new PrintWriter(socket.getOutputStream());
+                PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
                 nbrClients++;
                 clientNumber++;
 
@@ -84,7 +84,7 @@ class AcceptClients implements Runnable {
                 clientWriters.put((clientNumber % 40) + "", out);
 
                 System.out.println("Number of clients connected : " + nbrClients);
-                out.println("Tests.Client number : " + clientNumber + " is connected !");
+                out.println("Client number : " + clientNumber + " is connected !");
                 out.flush();
                 out.println(clientNumber % 40);
                 out.flush();

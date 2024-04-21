@@ -1,12 +1,12 @@
 
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¾©ò¹8“ÀŞœí1J$e5f21b2e-b34f-44d8-954a-93bb8b21d561
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¾©ò¹8“ÀŞœí1J$84d38d65-b1c2-42f9-a16c-8cdc01ee270a
 
-java:S1450"URemove the "socket" field and declare it as a local variable in the relevant methods.(Å’¬Úşÿÿÿÿ8ŸÀŞœí1J$13938e88-e2e9-45f6-b626-c11ebb93ab7e
+java:S1450"URemove the "socket" field and declare it as a local variable in the relevant methods.(Å’¬Úşÿÿÿÿ8ŸÀŞœí1J$b28bb2bf-d308-4842-9837-0719429c4635
 m
-java:S3010)"%Remove this assignment of "students".(óªÓŸüÿÿÿÿ8¨ÀŞœí1J$256095cc-9815-4258-af2c-83ad0e3e21fa
-G	java:S1061"+Replace this use of System.out by a logger.(ÛÁÎˆ8ºŒ˜âï1
+java:S3010?"%Remove this assignment of "students".(óªÓŸüÿÿÿÿ8¨ÀŞœí1J$ee952ee4-a80a-4c13-8c26-edc46a5f56bc
+m	java:S106H"+Replace this use of System.out by a logger.(ÛÁÎˆ8ºŒ˜âï1J$01e93a99-a802-49b7-b757-9110e5fef75b
 y
-java:S26969"6Make the enclosing method "static" or remove this set.(úøŞÃ8®ÀŞœí1J$763683ee-e82c-4a6b-96cf-c45672b0ca35
+java:S2696P"6Make the enclosing method "static" or remove this set.(úøŞÃ8®ÀŞœí1J$f895c405-e4e5-422d-9bbb-4d9d931642b0
 y
-java:S2696:"6Make the enclosing method "static" or remove this set.(Øã£Ë8®ÀŞœí1J$ce2c9bcf-50bf-4580-975f-51f05f3baa9c
-r	java:S106>"+Replace this use of System.out by a logger.(ó˜Æøÿÿÿÿ8¯ÀŞœí1J$95b4feac-a53c-4e80-8c7b-00e331b35b1a
+java:S2696Q"6Make the enclosing method "static" or remove this set.(Øã£Ë8®ÀŞœí1J$a4a203cf-3841-453a-9cfe-c3373b4afa3a
+r	java:S106V"+Replace this use of System.out by a logger.(ó˜Æøÿÿÿÿ8¯ÀŞœí1J$dc025ac2-bc44-46cc-b87c-258bdefe8eec

@@ -1,18 +1,22 @@
 
-“	java:S117f"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ì…Š8ÕÙÒáï1J$98d71a3c-c78a-4982-a3b8-085ec142b269
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¾©ò¹8ÙÙÒáï1J$3aa84b8d-dccd-4528-af78-3194f6f60ac8
+“	java:S117z"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ì…Š8şİ¹ˆğ1J$9914ac01-297f-4368-890c-5c6eec46ae5c
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¾©ò¹8‚Ş¹ˆğ1J$1f8ffedf-6c30-49bd-8a30-fb55b9219f17
 •
-java:S3776$"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(“–ış8¿ÛÒáï1J$509b1f89-a82b-4943-8833-6e5b1882fea4
-m	java:S106>"+Replace this use of System.out by a logger.(óùí¡8ÇÛÒáï1J$dd0bae1c-ca3c-4c6e-b915-995db465972b
+java:S3776'"RRefactor this method to reduce its Cognitive Complexity from 32 to the 15 allowed.(“–ış8à¹ˆğ1J$69ec80eb-8647-40a6-9974-d0df4eb9ffad
+m	java:S106?"+Replace this use of System.out by a logger.(”„á÷8”à¹ˆğ1J$d9fa2161-5fab-48eb-bfa1-7f8e4455100d
+m	java:S106A"+Replace this use of System.out by a logger.(’’İ8”à¹ˆğ1J$aac97e7e-1751-4477-9aa8-4a8b32f95787
+m	java:S106O"+Replace this use of System.out by a logger.(óùí¡8•à¹ˆğ1J$b1f16952-85de-4e06-93bd-5c5aa37fc45e
 q
-java:S5413J")Verify that "remove()" is used correctly.(¡¥®İıÿÿÿÿ8ÊÛÒáï1J$d6345491-8cd3-4799-a307-4d422e064bdb
-r	java:S106N"+Replace this use of System.out by a logger.(ãùÖ¾üÿÿÿÿ8ËÛÒáï1J$f7aa2cce-d34b-4f9b-a7c8-87aca137a062
+java:S5413\")Verify that "remove()" is used correctly.(¡¥®İıÿÿÿÿ8–à¹ˆğ1J$a90c7591-badc-4836-b56d-4ca182d17237
+r	java:S106`"+Replace this use of System.out by a logger.(ãùÖ¾üÿÿÿÿ8˜à¹ˆğ1J$84304e5b-f025-409f-bfa7-50500cc48ec7
 y
-java:S2696O"6Make the enclosing method "static" or remove this set.(†õÉò8ÍÛÒáï1J$70a5e1a6-8e77-47f0-9694-22a7d519fc70
-m	java:S106P"+Replace this use of System.out by a logger.(şúš¥8ÎÛÒáï1J$11c5730b-804e-44e4-8ed8-5ba79b5ce1aa
+java:S2696b"6Make the enclosing method "static" or remove this set.(†õÉò8™à¹ˆğ1J$4d14e695-0229-45a1-b7bb-d742c22a01f6
+m	java:S106c"+Replace this use of System.out by a logger.(şúš¥8™à¹ˆğ1J$a2e51aac-7735-46d3-80ab-bf31f22ea31e
 }
-java:S1117d";Rename "student" which hides the field declared at line 25.(¼¹ËJ8ÑÛÒáï1J$3e01f899-4b69-4a44-b570-7cf1b87b9bd8
-l	java:S106m"+Replace this use of System.out by a logger.(„êñ	8ÓÛÒáï1J$d59c6713-93d2-429b-a1f8-76b4fd64c48a
-m	java:S106p"+Replace this use of System.out by a logger.(°‰”8›âï1J$7d760529-407b-422b-bdfd-468d7846bee4
-z
-java:S1128"2Remove this unused import 'java.util.Collections'.(¢³ïÓşÿÿÿÿ8ÖÛÒáï1J$239996a7-6054-488b-97e0-5dfca2d56283
+java:S1117x";Rename "student" which hides the field declared at line 24.(¼¹ËJ8œà¹ˆğ1J$e53ad391-e9b3-4027-b9de-262d94bdb01b
+m	java:S106ƒ"+Replace this use of System.out by a logger.(„êñ	8à¹ˆğ1J$9ac9eef2-cc73-4708-88b1-6bba7fd01c34
+n	java:S106…"+Replace this use of System.out by a logger.(°‰”8à¹ˆğ1J$639e44a7-bd1c-4094-99c9-3bb6d24d4af0
+–
+java:S3776Š"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(‰ñÏ8à¹ˆğ1J$63452739-0752-46be-b292-63963df7c7eb
+
+java:S1117";Rename "student" which hides the field declared at line 24.(¡ù•8Ÿà¹ˆğ1J$b1f487b5-cfc8-4978-a2fe-938d333ee874

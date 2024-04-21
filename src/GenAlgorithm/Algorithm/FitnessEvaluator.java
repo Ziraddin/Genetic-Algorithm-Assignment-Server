@@ -25,6 +25,7 @@ public class FitnessEvaluator {
         for (Student student : students) {
             Destination assignedDestination = assignment.getAssignedDestination(student);
             List<String> preferredDestinations = student.getPreferredDestinations();
+
             int preferenceIndex = preferredDestinations.indexOf(assignedDestination.getName()) + 1;
             if (preferenceIndex > 0) {
                 totalCost += Math.pow(preferenceIndex - 1, 2);

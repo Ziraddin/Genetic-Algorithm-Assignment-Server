@@ -20,6 +20,10 @@ public class GeneticAlgorithm {
         this.destinations = destinations;
     }
 
+    public void updateStudents(List<Student> updatedStudents) {
+        this.students = updatedStudents;
+    }
+
     public Assignment optimize() {
         PopulationInitializer populationInitializer = new PopulationInitializer(populationSize, students, destinations);
         FitnessEvaluator fitnessEvaluator = new FitnessEvaluator(students);

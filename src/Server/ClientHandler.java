@@ -10,7 +10,6 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
@@ -24,6 +23,7 @@ class ClientHandler implements Runnable {
     private PrintWriter out;
     private Student student;
 
+    private GeneticAlgorithm geneticAlgorithm;
 
     // Constructor for ClientHandler class
     public ClientHandler(Socket socket, int clientId, BufferedReader in, PrintWriter out) {
@@ -31,6 +31,7 @@ class ClientHandler implements Runnable {
         this.clientId = clientId;
         this.in = in;
         this.out = out;
+        geneticAlgorithm = new GeneticAlgorithm(populationSize, mutationRate, students, destinations);
     }
 
     // Run method for handling client requests
@@ -54,17 +55,29 @@ class ClientHandler implements Runnable {
                     while (!(inputLine = in.readLine()).equals("end")) {
                         preferences.add(inputLine);
                     }
-                    // Update student preferences
-                    if (student == null) {
-                        student = new Student(clientId + "", preferences);
-                        students.add(student);
+                    // Check if all preferred destinations exceed the maximum student limit
+                    boolean flag = isPreferredDestinationsExceedLimit(preferences);
+                    if (flag) {
+                        out.println("Preferred destinations exceed the maximum limit.");
+                        out.flush();
+                        System.out.println("Preferred destinations exceed the maximum limit.");
                     } else {
-                        students.remove(student);
-                        student.updatePreferredDestinations(preferences);
-                        students.add(student);
+                        System.out.println("Preferred destinations does not exceed the maximum limit.");
+                        if (student == null) {
+                            student = new Student(clientId + "", preferences);
+                            students.add(student);
+                        } else {
+                            for (Student existingStudent : students) {
+                                if (existingStudent.getName().equals(clientId + "")) {
+                                    existingStudent.updatePreferredDestinations(preferences);
+                                    geneticAlgorithm.updateStudents(students);
+                                    break;
+                                }
+                            }
+                        }
+                        calculateBestAssignment();
+                        System.out.println("Number of students stated their preferences: " + students.size());
                     }
-                    System.out.println("Number of students stated their preferences: " + students.size());
-                    calculateBestAssignment();
                 }
             }
         } catch (IOException e) {
@@ -79,10 +92,9 @@ class ClientHandler implements Runnable {
                         students.remove(i);
                     }
                 }
-                // Remove client writer
                 clientWriters.remove(clientId + "");
                 System.out.println("Client with id : " + clientId + " is disconnected.");
-                // Decrease the number of active clients
+
                 nbrClients--;
                 System.out.println("Number of Active Clients :  " + nbrClients);
             } catch (IOException e) {
@@ -91,7 +103,6 @@ class ClientHandler implements Runnable {
         }
     }
 
-    // Method to handle client disconnection
     private void handleDisconnect() {
         try {
             // Send disconnection acknowledgment to the client
@@ -102,9 +113,7 @@ class ClientHandler implements Runnable {
         }
     }
 
-    // Method to calculate the best assignment based on preferences
     private void calculateBestAssignment() {
-        GeneticAlgorithm geneticAlgorithm = new GeneticAlgorithm(populationSize, mutationRate, students, destinations);
         Assignment bestAssignment = geneticAlgorithm.optimize();
 
         // Send assignment results to the clients
@@ -116,12 +125,32 @@ class ClientHandler implements Runnable {
             PrintWriter writer = clientWriters.get(studentName);
             if (writer != null) {
                 // Send the assignment result to the client
-                writer.println("You are assigned to " + AssignedDestination.getName());
-                System.out.println("Student with id : " + studentName + " is assigned to : " + AssignedDestination.getName());
                 writer.flush();
+                writer.println("You are assigned to " + AssignedDestination.getName());
+                writer.flush();
+                System.out.println("Student with id : " + studentName + " is assigned to : " + AssignedDestination.getName());
             } else {
                 System.out.println("No writer found for student name: " + studentName);
             }
         }
     }
+
+    private boolean isPreferredDestinationsExceedLimit(List<String> preferences) {
+        for (String preferredDestinationName : preferences) {
+            int count = 0;
+            for (Student student : students) {
+                if (student.getPreferredDestinations().contains(preferredDestinationName)) {
+                    count++;
+                }
+            }
+            if (preferences.indexOf(preferredDestinationName) == preferences.size() - 1)
+                for (Destination destination : destinations) {
+                    if (Objects.equals(preferredDestinationName, destination.getName()) && count >= destination.getMaxStudents()) {
+                        return true;
+                    }
+                }
+        }
+        return false;
+    }
+
 }

@@ -1,14 +1,10 @@
 
-=
-src/Main.java,9\2\924f089edb4af5ee45c8a9d1129cd28e2b368138
 F
 src/Server/Server.java,a\9\a9588fce1c3bc78ec27bdea72c1267a00a95124e
 M
 src/Server/AcceptClients.java,2\1\21d8c1ca4e44a28076814bfdb88ef252b6855fa0
 S
 #src/Tests/TestGeneticAlgorithm.java,f\4\f47404923ae87b62dd5a69119c0204b9ae581c39
-F
-src/Server/Client.java,f\1\f12c489083e3d64dea2e5e45d2fbed8b298c5088
 `
 0src/GenAlgorithm/Algorithm/GeneticAlgorithm.java,1\0\10f813bd4c8fb57881907a9509839516d5a6eead
 [
@@ -29,8 +25,6 @@ a
 1src/GenAlgorithm/Algorithm/DestinationFinder.java,a\7\a7bbfb46d16dd65d8b2a8bb47cc8c7de127841c0
 M
 src/Server/ClientHandler.java,e\3\e3217b0593d7bef8f37733ebe49c2266c158284c
-w
-G.idea/sonarlint/issuestore/9/2/924f089edb4af5ee45c8a9d1129cd28e2b368138,f\a\fa75e75cdcbcdff2b0010bc7325ef5a408f526cd
 ]
 -.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
 U
@@ -41,8 +35,6 @@ U
 Q.idea/sonarlint/securityhotspotstore/2/1/21d8c1ca4e44a28076814bfdb88ef252b6855fa0,6\6\662a04aa1a122b6b4a0334d635a338ff209fc7a0
 Å
 Q.idea/sonarlint/securityhotspotstore/a/9/a9588fce1c3bc78ec27bdea72c1267a00a95124e,e\2\e2dff74c2092c2921d06428872c115adfb3999b6
-Å
-Q.idea/sonarlint/securityhotspotstore/9/2/924f089edb4af5ee45c8a9d1129cd28e2b368138,b\0\b08f1ab659fbdd998f45c0def99188f980cc899b
 S
 #.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
 Å
@@ -53,8 +45,6 @@ Q.idea/sonarlint/securityhotspotstore/5/b/5b51f46410ba332e9663fc7fb5f65df8c2159c
 Q.idea/sonarlint/securityhotspotstore/f/4/f47404923ae87b62dd5a69119c0204b9ae581c39,f\3\f3eaa7708a20973e1b501f9ca14684b2ee2d32e2
 Å
 Q.idea/sonarlint/securityhotspotstore/e/3/e3217b0593d7bef8f37733ebe49c2266c158284c,b\3\b3ec50edab41627eab3394ec1ef85973d0a98a84
-Å
-Q.idea/sonarlint/securityhotspotstore/f/1/f12c489083e3d64dea2e5e45d2fbed8b298c5088,6\b\6b791e10adda1d40b71c83881f05fa5060c29b1f
 Å
 Q.idea/sonarlint/securityhotspotstore/3/a/3a534bae1b57708e654b7235a45b138144003264,3\a\3a5d7d2fc4f566309421574370c47605f3577ab8
 Å
@@ -71,3 +61,5 @@ Q.idea/sonarlint/securityhotspotstore/e/c/ecbef894671f1817121ea2160e4f109b725cc0
 Q.idea/sonarlint/securityhotspotstore/8/1/819d66740679b29ecceab812bddfd5088caac029,f\7\f7993979d6eda5c03dac9f4e74ca10487d5339dc
 Å
 Q.idea/sonarlint/securityhotspotstore/a/7/a7bbfb46d16dd65d8b2a8bb47cc8c7de127841c0,d\6\d619e7bed4b1db4044834a106b5b4f14d1f9456a
+9
+	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d

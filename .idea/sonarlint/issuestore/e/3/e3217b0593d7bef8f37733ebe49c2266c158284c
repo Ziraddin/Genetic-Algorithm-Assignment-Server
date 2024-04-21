@@ -1,22 +1,18 @@
 
-“	java:S117z"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ì…Š8şİ¹ˆğ1J$9914ac01-297f-4368-890c-5c6eec46ae5c
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¾©ò¹8‚Ş¹ˆğ1J$1f8ffedf-6c30-49bd-8a30-fb55b9219f17
-•
-java:S3776'"RRefactor this method to reduce its Cognitive Complexity from 32 to the 15 allowed.(“–ış8à¹ˆğ1J$69ec80eb-8647-40a6-9974-d0df4eb9ffad
-m	java:S106?"+Replace this use of System.out by a logger.(”„á÷8”à¹ˆğ1J$d9fa2161-5fab-48eb-bfa1-7f8e4455100d
-m	java:S106A"+Replace this use of System.out by a logger.(’’İ8”à¹ˆğ1J$aac97e7e-1751-4477-9aa8-4a8b32f95787
-m	java:S106O"+Replace this use of System.out by a logger.(óùí¡8•à¹ˆğ1J$b1f16952-85de-4e06-93bd-5c5aa37fc45e
-q
-java:S5413\")Verify that "remove()" is used correctly.(¡¥®İıÿÿÿÿ8–à¹ˆğ1J$a90c7591-badc-4836-b56d-4ca182d17237
-r	java:S106`"+Replace this use of System.out by a logger.(ãùÖ¾üÿÿÿÿ8˜à¹ˆğ1J$84304e5b-f025-409f-bfa7-50500cc48ec7
+“	java:S117s"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ì…Š8È—¶‹ğ1J$29beefb1-426c-4c33-b950-f73112b0f432
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¾©ò¹8‚Ş¹ˆğ1J$17a0a44a-d984-4f00-9551-60ed31024cda
+r	java:S106K"+Replace this use of System.out by a logger.(ãùÖ¾üÿÿÿÿ8Ùš¶‹ğ1J$4f4c14a7-014e-406b-95d5-0d69f9ee0bb5
 y
-java:S2696b"6Make the enclosing method "static" or remove this set.(†õÉò8™à¹ˆğ1J$4d14e695-0229-45a1-b7bb-d742c22a01f6
-m	java:S106c"+Replace this use of System.out by a logger.(şúš¥8™à¹ˆğ1J$a2e51aac-7735-46d3-80ab-bf31f22ea31e
+java:S2696M"6Make the enclosing method "static" or remove this set.(†õÉò8Ûš¶‹ğ1J$d88832db-b7a9-4c91-a667-2eafdf60d474
+m	java:S106N"+Replace this use of System.out by a logger.(şúš¥8Ûš¶‹ğ1J$1307dba1-4fb2-47e7-994c-4ca97a7f05f3
+m	java:S106j"+Replace this use of System.out by a logger.(óùí¡8İš¶‹ğ1J$43bb6a8a-79a8-456f-bc24-65852baa4897
 }
-java:S1117x";Rename "student" which hides the field declared at line 24.(¼¹ËJ8œà¹ˆğ1J$e53ad391-e9b3-4027-b9de-262d94bdb01b
-m	java:S106ƒ"+Replace this use of System.out by a logger.(„êñ	8à¹ˆğ1J$9ac9eef2-cc73-4708-88b1-6bba7fd01c34
-n	java:S106…"+Replace this use of System.out by a logger.(°‰”8à¹ˆğ1J$639e44a7-bd1c-4094-99c9-3bb6d24d4af0
-–
-java:S3776Š"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(‰ñÏ8à¹ˆğ1J$63452739-0752-46be-b292-63963df7c7eb
+java:S1117q";Rename "student" which hides the field declared at line 24.(¼¹ËJ8ßš¶‹ğ1J$07be3ebf-a474-434c-a743-04cd28cc166a
+l	java:S106|"+Replace this use of System.out by a logger.(„êñ	8áš¶‹ğ1J$ecb230e9-ee83-4784-805b-04a9c7c4a0f5
+m	java:S106~"+Replace this use of System.out by a logger.(°‰”8áš¶‹ğ1J$6bb3ff14-80cc-4e6b-b77c-d4bb845820a0
+›
+java:S3776ƒ"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(ö‡¯‚üÿÿÿÿ8âš¶‹ğ1J$e8872ba6-ff02-43c2-b1da-85ea3fdec77d
 
-java:S1117";Rename "student" which hides the field declared at line 24.(¡ù•8Ÿà¹ˆğ1J$b1f487b5-cfc8-4978-a2fe-938d333ee874
+java:S1117†";Rename "student" which hides the field declared at line 24.(¡ù•8ãš¶‹ğ1J$db80c76e-9c1b-4eff-8319-400d527fb3bc
+
+java:S1144ƒ"GRemove this unused private "isPreferredDestinationsExceedLimit" method.(ö‡¯‚üÿÿÿÿ8åš¶‹ğ1J$57e11d74-6ee4-48ed-a47a-c4217b8e7ee3

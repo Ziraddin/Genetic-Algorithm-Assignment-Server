@@ -24,31 +24,71 @@ public class PopulationInitializer {
     public List<Assignment> initializePopulation() {
         // Create an empty list to hold the population of assignments.
         List<Assignment> population = new ArrayList<>();
-        // Iterate over the population size to create each assignment.
-        for (int i = 0; i < populationSize; i++) {
+
+        // Continue creating assignments until the population size is reached.
+        while (population.size() < populationSize) {
             // Create a new assignment.
             Assignment assignment = new Assignment();
+            // Flag to indicate if any destination limit is exceeded.
+            boolean exceededLimit = false;
+
             // Iterate over each student to assign them to a destination.
             for (Student student : students) {
                 // Create a copy of the student's preferred destinations and shuffle them to randomize the assignment process.
                 List<String> preferredDestinations = new ArrayList<>(student.getPreferredDestinations());
                 Collections.shuffle(preferredDestinations);
+
+                // Flag to indicate if the student has exceeded the limit.
+                boolean studentExceededLimit = false;
+
                 // Iterate over the shuffled preferred destinations.
                 for (String destinationName : preferredDestinations) {
                     // Find the destination object corresponding to the destination name.
                     Destination destination = destinationFinder.findDestination(destinationName);
-                    // If the destination is found and it has not reached its maximum capacity, assign the student to it.
+
+                    // If the destination is found, and it has not reached its maximum capacity, assign the student to it.
                     if (destination != null && assignment.getAssignedStudents(destination) < destination.getMaxStudents()) {
                         assignment.assignStudent(student, destination);
                         // Move to the next student.
                         break;
+                    } else {
+                        // Set the flag to true if the student has exceeded the limit.
+                        studentExceededLimit = true;
+                    }
+                }
+
+                // If the student has exceeded the limit, assign them to a random destination until the limit is no longer exceeded.
+                if (studentExceededLimit) {
+                    List<Destination> availableDestinations = destinationFinder.getDestinationsWithCapacity(assignment);
+
+                    while (!availableDestinations.isEmpty()) {
+                        Collections.shuffle(availableDestinations);
+                        Destination randomDestination = availableDestinations.get(0);
+                        assignment.assignStudent(student, randomDestination);
+
+                        // If the assignment does not exceed the limit for the random destination, break the loop.
+                        if (assignment.getAssignedStudents(randomDestination) < randomDestination.getMaxStudents()) {
+                            break;
+                        } else {
+                            // Remove the random destination if it exceeds the limit.
+                            availableDestinations.remove(randomDestination);
+                        }
+                    }
+
+                    // If no available destinations are left, set the exceededLimit flag to true and break the loop.
+                    if (availableDestinations.isEmpty()) {
+                        exceededLimit = true;
+                        break;
                     }
                 }
             }
-            // Add the completed assignment to the population.
-            population.add(assignment);
+
+            if (!exceededLimit) {
+                population.add(assignment);
+            }
         }
-        // Return the initialized population of assignments.
+
         return population;
     }
 }
+

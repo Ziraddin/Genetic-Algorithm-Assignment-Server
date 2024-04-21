@@ -1,2 +1,4 @@
 
-•	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(υ¨¦βJ$9c3c4772-1710-4cd8-a7ce-8a90a54bae0f
+	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(υ¨¦β8³δήπ1J$22ddde5a-9e99-4446-b845-a71f2e4094ad
+
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 31 to the 15 allowed.(¦Π–ύÿÿÿÿ8α–επ1J$3f1f1ba1-5e73-4d8c-8b90-57bee1d4e28f

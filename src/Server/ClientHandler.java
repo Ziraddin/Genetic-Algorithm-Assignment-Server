@@ -55,29 +55,9 @@ class ClientHandler implements Runnable {
                     while (!(inputLine = in.readLine()).equals("end")) {
                         preferences.add(inputLine);
                     }
-                    // Check if all preferred destinations exceed the maximum student limit
-                    boolean flag = isPreferredDestinationsExceedLimit(preferences);
-                    if (flag) {
-                        out.println("Preferred destinations exceed the maximum limit.");
-                        out.flush();
-                        System.out.println("Preferred destinations exceed the maximum limit.");
-                    } else {
-                        System.out.println("Preferred destinations does not exceed the maximum limit.");
-                        if (student == null) {
-                            student = new Student(clientId + "", preferences);
-                            students.add(student);
-                        } else {
-                            for (Student existingStudent : students) {
-                                if (existingStudent.getName().equals(clientId + "")) {
-                                    existingStudent.updatePreferredDestinations(preferences);
-                                    geneticAlgorithm.updateStudents(students);
-                                    break;
-                                }
-                            }
-                        }
-                        calculateBestAssignment();
-                        System.out.println("Number of students stated their preferences: " + students.size());
-                    }
+
+                    // Process preferences
+                    handlePreferences(preferences);
                 }
             }
         } catch (IOException e) {
@@ -87,10 +67,9 @@ class ClientHandler implements Runnable {
                 // Close the socket upon client disconnection
                 socket.close();
                 // Remove client preferences upon disconnection
-                for (int i = 0; i < students.size(); i++) {
-                    if (Objects.equals(students.get(i).getName(), student.getName())) {
-                        students.remove(i);
-                    }
+                if (student != null) {
+                    students.remove(student);
+                    geneticAlgorithm.updateStudents(students);
                 }
                 clientWriters.remove(clientId + "");
                 System.out.println("Client with id : " + clientId + " is disconnected.");
@@ -103,7 +82,7 @@ class ClientHandler implements Runnable {
         }
     }
 
-    private void handleDisconnect() {
+    private synchronized void handleDisconnect() {
         try {
             // Send disconnection acknowledgment to the client
             out.println("disconnect_ack");
@@ -113,7 +92,21 @@ class ClientHandler implements Runnable {
         }
     }
 
-    private void calculateBestAssignment() {
+    private synchronized void handlePreferences(List<String> preferences) {
+        if (student == null) {
+            student = new Student(clientId + "", preferences);
+            students.add(student);
+        } else {
+            student.updatePreferredDestinations(preferences);
+            geneticAlgorithm.updateStudents(students);
+        }
+
+        // Calculate best assignment
+        calculateBestAssignment();
+        System.out.println("Number of students stated their preferences: " + students.size());
+    }
+
+    private synchronized void calculateBestAssignment() {
         Assignment bestAssignment = geneticAlgorithm.optimize();
 
         // Send assignment results to the clients
@@ -135,7 +128,7 @@ class ClientHandler implements Runnable {
         }
     }
 
-    private boolean isPreferredDestinationsExceedLimit(List<String> preferences) {
+    private synchronized boolean isPreferredDestinationsExceedLimit(List<String> preferences) {
         for (String preferredDestinationName : preferences) {
             int count = 0;
             for (Student student : students) {
@@ -154,3 +147,4 @@ class ClientHandler implements Runnable {
     }
 
 }
+
